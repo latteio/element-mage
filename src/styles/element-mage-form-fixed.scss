@@ -1,0 +1,114 @@
+/**
+ * 表单样式
+ */
+input[aria-hidden="true"] {
+  display: none !important;
+}
+
+.el-input-number {
+  width: 100% !important;
+}
+
+.el-main.mag-form__main {
+  padding: 6px var(--mag-view-base-padding) 0 var(--mag-view-base-padding) !important;
+}
+
+.el-form-item--small {
+  --el-form-label-font-size: var(--mag-font-size-small) !important;
+}
+
+.el-form-item--default {
+  --el-form-label-font-size: var(--mag-font-size-base) !important;
+}
+
+.el-form-item--large {
+  --el-form-label-font-size: var(--mag-font-size-large) !important;
+}
+
+/**
+ * 按钮组
+ */
+.mag-button-group {
+  display: inline-flex;
+  width: auto;
+  height: var(--mag-component-group-height);
+  line-height: var(--mag-component-group-height);
+  align-items: center;
+  vertical-align: middle;
+
+  div {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+}
+
+.mag-button-group:before,
+.mag-button-group:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.mag-button-subgroup {
+  display: inline-flex;
+  vertical-align: middle;
+  height: var(--mag-component-group-height);
+  line-height: var(--mag-component-group-height);
+  align-items: center;
+}
+
+.el-form-item__content > *:not(:first-child),
+.mag-button-group > *:not(:first-child),
+.mag-button-subgroup > *:not(:first-child) {
+  margin-left: 4px !important;
+}
+
+.mag-form__form-bars {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 6px;
+}
+
+.mag-flex-component {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.mag-flex-component__label {
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  align-items: center;
+  height: var(--el-component-size);
+  line-height: var(--el-component-size);
+  font-size: var(--mag-font-size-base);
+  color: var(--el-text-color-regular);
+  padding: 0 12px 0 0;
+  box-sizing: border-box;
+}
+
+.mag-flex-component__compo {
+  display: inline-flex;
+  align-items: flex-start;
+  width: 100%;
+  font-size: var(--mag-font-size-base);
+  color: var(--el-text-color-regular);
+  box-sizing: border-box;
+}
+
+.mag-flex-component__label_default,
+.mag-flex-component__compo_default {
+  font-size: var(--mag-font-size-base);
+}
+
+.mag-flex-component__label_small,
+.mag-flex-component__compo_small {
+  font-size: var(--mag-font-size-small);
+}
+
+.mag-flex-component__label_large,
+.mag-flex-component__compo_large {
+  font-size: var(--mag-font-size-large);
+}

@@ -1,0 +1,8 @@
+/**
+ * TabGroup 样式
+ */
+.el-main.mag-tabgroup__main {
+  flex: 1;
+  padding: 0 !important;
+  transition: var(--el-transition-duration) ease-in-out;
+}

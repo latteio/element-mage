@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "element-mage",
+  "version": "2025.1.1",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "style": "dist/index.css",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "__npminstall_done": true
+}

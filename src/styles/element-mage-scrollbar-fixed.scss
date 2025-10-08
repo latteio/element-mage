@@ -1,0 +1,23 @@
+/**
+ * 滚动条样式: 滑块 fixed
+ */
+.el-scrollbar__thumb {
+  background-color: #464646 !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.el-scrollbar__thumb:hover,
+.el-scrollbar__thumb:active {
+  background-color: #323232 !important;
+}
+
+/**
+ * 滚动条样式: 轨道 fixed
+ */
+.el-scrollbar__bar.is-horizontal {
+  height: 10px !important;
+}
+
+.el-scrollbar__bar.is-vertical {
+  width: 10px !important;
+}

@@ -1,0 +1,73 @@
+/**
+ * 表格样式
+ */
+.el-main.mag-table__main {
+  flex: 1;
+  padding: 0 !important;
+  transition: var(--el-transition-duration) ease-in-out;
+}
+
+.el-main > .mag-table__table {
+  border: 0 !important;
+}
+
+.el-main > .mag-table__table-bars {
+  border-bottom: 1px solid var(--mag-component-border-color) !important;
+}
+
+.el-main > .mag-table__table.mag-table__empty-table-bars {
+  border: 0 !important;
+}
+
+.el-table thead tr th {
+  background-color: var(--mag-view-thead-background-color) !important;
+  color: var(--el-text-color-regular) !important;
+  font-size: var(--mag-font-size-medium);
+  font-weight: 600;
+}
+
+.el-table.el-table--default thead tr th {
+  height: var(--mag-view-thead-height) !important;
+}
+
+.el-table--default .el-table__cell {
+  padding: 4px 0 !important;
+}
+
+.el-table.el-table--small thead tr th {
+  height: var(--mag-view-thead-small-height) !important;
+}
+
+.el-table--small .el-table__cell {
+  padding: 2px 0 !important;
+}
+
+.el-table.el-table--large thead tr th {
+  height: var(--mag-view-thead-large-height) !important;
+}
+
+.el-table--large .el-table__cell {
+  padding: 8px 0 !important;
+}
+
+.el-table--border:before,
+.el-table--border:after,
+.el-table__inner-wrapper::before,
+.el-table__inner-wrapper::after,
+.el-table__border-left-patch {
+  display: none !important;
+}
+
+.el-pagination__sizes {
+  display: flex !important;
+}
+
+.mag-table__table-page-bars {
+  display: flex;
+  align-items: center;
+  height: var(--mag-view-footer-height);
+  padding: 0 20px;
+  background-color: var(--mag-view-footer-background-color) !important;
+  box-sizing: border-box;
+}
+

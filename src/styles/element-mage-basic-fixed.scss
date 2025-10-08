@@ -1,0 +1,209 @@
+/**
+ * nprogress 调整
+ */
+#nprogress {
+  --nprogress-base-color: var(--el-color-primary);
+}
+
+#nprogress .bar {
+  background: var(--nprogress-base-color) !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px var(--nprogress-base-color), 0 0 5px var(--nprogress-base-color) !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: var(--nprogress-base-color) !important;
+  border-left-color: var(--nprogress-base-color) !important;
+}
+
+/**
+ * 基本字号
+ */
+.mag-font-size-10 {
+  font-size: 10px !important;
+}
+
+.mag-font-size-11 {
+  font-size: 11px !important;
+}
+
+.mag-font-size-12 {
+  font-size: 12px !important;
+}
+
+.mag-font-size-13 {
+  font-size: 13px !important;
+}
+
+.mag-font-size-14 {
+  font-size: 14px !important;
+}
+
+.mag-font-size-15 {
+  font-size: 15px !important;
+}
+
+.mag-font-size-16 {
+  font-size: 16px !important;
+}
+
+.mag-font-size-17 {
+  font-size: 17px !important;
+}
+
+.mag-font-size-18 {
+  font-size: 18px !important;
+}
+
+.mag-font-size-19 {
+  font-size: 19px !important;
+}
+
+.mag-font-size-20 {
+  font-size: 20px !important;
+}
+
+.mag-font-size-21 {
+  font-size: 21px !important;
+}
+
+.mag-font-size-22 {
+  font-size: 22px !important;
+}
+
+.mag-font-size-23 {
+  font-size: 23px !important;
+}
+
+.mag-font-size-24 {
+  font-size: 24px !important;
+}
+
+.mag-font-size-25 {
+  font-size: 25px !important;
+}
+
+.mag-font-size-26 {
+  font-size: 26px !important;
+}
+
+.mag-font-size-27 {
+  font-size: 27px !important;
+}
+
+.mag-font-size-28 {
+  font-size: 28px !important;
+}
+
+.mag-font-size-29 {
+  font-size: 29px !important;
+}
+
+.mag-font-size-30 {
+  font-size: 30px !important;
+}
+
+.mag-font-weight-normal {
+  font-weight: 300 !important;
+}
+
+.mag-font-weight-bold {
+  font-weight: 600 !important;
+}
+
+/**
+ * 基本标题
+ */
+.mag-title {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  vertical-align: middle;
+  padding: 4px 0;
+
+  .mag-title__main-title {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    background-color: transparent;
+    padding: 0 0 2px 0;
+    height: 100%;
+  }
+
+  .mag-title__sub-title {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 4px;
+    border-radius: 4px;
+    padding: 2px 4px 4px 4px;
+    background-color: transparent;
+    height: 100%;
+  }
+
+  .mag-title__sub-title-default {
+    background-color: transparent;
+  }
+
+  .mag-title__sub-title-primary {
+    background-color: var(--el-color-primary);
+  }
+
+  .mag-title__sub-title-success {
+    background-color: var(--el-color-success);
+  }
+
+  .mag-title__sub-title-info {
+    background-color: var(--el-color-info);
+  }
+
+  .mag-title__sub-title-warning {
+    background-color: var(--el-color-warning);
+  }
+
+  .mag-title__sub-title-danger {
+    background-color: var(--el-color-danger);
+  }
+}
+
+/**
+ * 基本对齐: 控制组件子组件水平对齐方式
+ */
+.is-left-alignment {
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+.is-right-alignment {
+  text-align: right !important;
+  justify-content: flex-end !important;
+}
+
+.is-center-alignment {
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+/**
+ * 基本遮罩
+ */
+.el-loading-mask {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/**
+ * 基本图标: 图标旋转和翻转
+ */
+.el-icon {
+  transition: transform var(--el-transition-duration) ease-in-out;
+}
+
+.el-icon.is-expanded {
+  transform: rotate(90deg);
+}
+
+.el-icon.is-reversed {
+  transform: rotate(180deg);
+}

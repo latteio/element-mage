@@ -1,0 +1,15 @@
+/**
+ * 树样式
+ */
+.el-main.mag-tree__main {
+  padding: 6px var(--mag-view-base-padding) !important;
+}
+
+.mag-tree__node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--mag-font-size-base);
+  padding-right: 8px;
+}

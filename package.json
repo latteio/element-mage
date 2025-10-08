@@ -1,0 +1,64 @@
+{
+  "type": "module",
+  "name": "element-mage",
+  "version": "2025.1.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite --mode=dev",
+    "build": "vite build --mode=prod",
+    "prepack": "npm run build --mode=prod",
+    "postpack": "echo 'Package created successfully'",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "element-plus": "^2.11.2",
+    "@element-plus/icons-vue": "^2.3.1",
+    "vue": "^3.5.13",
+    "vue-i18n": "11.1.10",
+    "vue-router": "^4.5.1",
+    "vue3-uuid": "^1.0.0",
+    "pinia": "^2.3.1",
+    "axios": "1.12.0",
+    "jsencrypt": "^3.3.2",
+    "nprogress": "^0.2.0",
+    "sortablejs": "^1.15.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@tsconfig/node18": "^2.0.1",
+    "@types/node": "^18.19.103",
+    "@types/nprogress": "^0.2.3",
+    "@types/sortablejs": "^1.15.8",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "@vitejs/plugin-vue-jsx": "^4.1.0",
+    "@vue/runtime-dom": "^3.5.14",
+    "esbuild": "^0.25.4",
+    "eslint": "^9.15.0",
+    "eslint-plugin-vue": "^9.31.0",
+    "globals": "^15.12.0",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.5",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "unplugin-vue-components": "^28.8.0",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vue-tsc": "^2.1.10",
+    "yarn": "^1.22.22"
+  },
+  "main": "dist/dist/index.umd.js",
+  "module": "dist/dist/index.es.js",
+  "style": "dist/dist/index.css",
+  "types": "dist/dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "style": "./dist/dist/index.css",
+      "import": "./dist/dist/index.es.js",
+      "require": "./dist/dist/index.umd.js"
+    }
+  }
+}
