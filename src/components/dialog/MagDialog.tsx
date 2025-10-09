@@ -60,10 +60,10 @@ const MagDialog = defineComponent({
     const calcDialogBodyHeight = () => {
       if (props.model.fullscreen) {
         if (props.model.showConfirmBtn || props.model.showCancelBtn) {
-          return "calc(100vh - 110px)";
+          return "calc(100vh - 105px)";
         }
 
-        return "calc(100vh - 65px)";
+        return "calc(100vh - 60px)";
       }
 
       return (props.model.height || "40vh");

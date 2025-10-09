@@ -11,12 +11,12 @@ import DialogView from "@/views/demos/dialog/DialogView.vue";
 
 const dialogModel = reactive({
   visible: false,
-  fullscreen: false,
+  fullscreen: true,
   header: '',
   headerAlign: 'center',
   footerAlign: 'center',
-  showConfirmBtn: true,
-  showCancelBtn: false,
+  showConfirmBtn: false,
+  showCancelBtn: true,
   data: {},
   onClose: (retValues: any) => {
     console.log(retValues)
