@@ -6,6 +6,7 @@
   margin-bottom: 0 !important;
   padding: var(--mag-view-base-padding) !important;
   border-bottom: 1px solid var(--mag-component-border-color);
+  height: var(--mag-component-height);
 
   .el-dialog__title {
     font-size: var(--mag-view-header-text-size) !important;
@@ -26,6 +27,7 @@
   flex: 1;
   justify-content: center;
   max-height: 100vh;
+  box-sizing: border-box;
 }
 
 .el-dialog__footer {
@@ -37,6 +39,7 @@
   margin-bottom: 0 !important;
   padding: var(--mag-view-base-padding) !important;
   border-bottom: 1px solid var(--mag-component-border-color);
+  height: var(--mag-component-height);
 
   .el-drawer__title {
     font-size: var(--mag-view-header-text-size) !important;
@@ -50,6 +53,7 @@
   flex: 1 !important;
   overflow: auto !important;
   padding: var(--mag-body-base-padding) !important;
+  box-sizing: border-box;
 }
 
 .mag-drawer__body {

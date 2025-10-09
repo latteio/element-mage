@@ -15,7 +15,7 @@ const dialogModel = reactive({
   header: '',
   headerAlign: 'center',
   footerAlign: 'center',
-  showConfirmBtn: false,
+  showConfirmBtn: true,
   showCancelBtn: false,
   data: {},
   onClose: (retValues: any) => {

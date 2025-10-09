@@ -31,8 +31,8 @@ input[aria-hidden="true"] {
 .mag-button-group {
   display: inline-flex;
   width: auto;
-  height: var(--mag-component-group-height);
-  line-height: var(--mag-component-group-height);
+  height: var(--mag-component-height);
+  line-height: var(--mag-component-height);
   align-items: center;
   vertical-align: middle;
 
@@ -52,8 +52,8 @@ input[aria-hidden="true"] {
 .mag-button-subgroup {
   display: inline-flex;
   vertical-align: middle;
-  height: var(--mag-component-group-height);
-  line-height: var(--mag-component-group-height);
+  height: var(--mag-component-height);
+  line-height: var(--mag-component-height);
   align-items: center;
 }
 

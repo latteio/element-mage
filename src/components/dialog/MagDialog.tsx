@@ -55,6 +55,21 @@ const MagDialog = defineComponent({
     });
 
     /**
+     * 动态计算对话框body的高度
+     */
+    const calcDialogBodyHeight = () => {
+      if (props.model.fullscreen) {
+        if (props.model.showConfirmBtn || props.model.showCancelBtn) {
+          return "calc(100vh - 110px)";
+        }
+
+        return "calc(100vh - 65px)";
+      }
+
+      return (props.model.height || "40vh");
+    }
+
+    /**
      * 定义对话框初始化方法
      */
     const onInitDialog = () => {
@@ -64,7 +79,7 @@ const MagDialog = defineComponent({
       props.model.header = props.model.header || "";
       props.model.headerAlign = props.model.headerAlign || "left";
       props.model.width = props.model.fullscreen ? "100vw" : (props.model.width || "60vw");
-      props.model.height = props.model.fullscreen ? "calc(100vh - 120px)" : (props.model.height || "40vh");
+      props.model.height = calcDialogBodyHeight();
       props.model.url = props.model.url || ""
       props.model.footerAlign = props.model.footerAlign || "right";
       props.model.showConfirmBtn = (props.model.showConfirmBtn !== false);

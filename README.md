@@ -2,6 +2,7 @@
 Based on Vu3 ElementPlus TSX component encapsulationGoal: 
 Refined, concise, close to native; keep encapsulation unchanged, allow easy extension, try not to change user habits.
 
+
 ## Project Setup
 
 ```sh
@@ -25,15 +26,15 @@ npm run build
 ```sh
 npm run lint
 ```
-### ����������(npm pack����������tgz��ʽ)
+### Component packaging command (pack the component into tgz format)
 ```sh
 npm run build
 npm pack
 ```
 
-### ����������
+### Component packaging configuration
 
-package.json�����ã�
+Configuration in package.json: 
 ```json
 "main": "dist/index.umd.js",
 "module": "dist/index.es.js",
@@ -51,7 +52,7 @@ package.json�����ã�
 }
 ```
 
-vite.config.ts������:
+Configuration in vite.config.ts: 
 ```javascript
 build: {
     outDir: 'dist',
