@@ -9,8 +9,8 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
    * @method remove 移除永久缓存
    * @method clear  移除全部永久缓存
    */
-  let __APP__TOKEN__KEY: string = "OpaqueToken";
   let __APP__STORAGE__KEY: any = `MAG_APP_STORAGE_KEY__${appConfig.code}_`;
+  let __APP__TOKEN__KEY: string = "OpaqueToken";
 
   function getStorageKeyInternal(key: string) {
     return `${__APP__STORAGE__KEY}${key}`;
