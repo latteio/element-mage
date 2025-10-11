@@ -134,7 +134,7 @@ const components: any = {
  */
 const install = function (app: any, options: AppConfiguration) {
   /* 注册全局变量 */
-  app.config['ElementMageAppCode'] = options?.code || "NA";
+  app.config['mag_app__app_code'] = options?.code || "NA";
 
   /* 注册全局方法: 全局错误 Handler */
   app.config.errorHandler = ErrorHandler;

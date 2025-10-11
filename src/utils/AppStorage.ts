@@ -13,7 +13,7 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
   let __APP__STORAGE__KEY: any = appConfig.code;
 
   function getKey(key: string) {
-    return `ELEMENT_MAGE_APP_STORAGE_KEY::${__APP__STORAGE__KEY}${key}`;
+    return `MAG_APP_STORAGE_KEY__${__APP__STORAGE__KEY}_${key}`;
   }
 
   const Local = {
