@@ -10,10 +10,10 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
    * @method clear  移除全部永久缓存
    */
   let __APP__TOKEN__KEY: string = "OpaqueToken";
-  let __APP__STORAGE__KEY: any = appConfig.code;
+  let __APP__STORAGE__KEY: any = `MAG_APP_STORAGE_KEY__${appConfig.code}_`;
 
-  function getKey(key: string) {
-    return `MAG_APP_STORAGE_KEY__${__APP__STORAGE__KEY}_${key}`;
+  function getStorageKeyInternal(key: string) {
+    return `${__APP__STORAGE__KEY}${key}`;
   }
 
   const Local = {
@@ -23,7 +23,7 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
      * @param val
      */
     set<T>(key: string, val: T) {
-      window.localStorage.setItem(getKey(key), JSON.stringify(val));
+      window.localStorage.setItem(getStorageKeyInternal(key), JSON.stringify(val));
     },
 
     /**
@@ -31,7 +31,7 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
      * @param key
      */
     get(key: string) {
-      let json = <string>window.localStorage.getItem(getKey(key));
+      let json = <string>window.localStorage.getItem(getStorageKeyInternal(key));
       return JSON.parse(json);
     },
 
@@ -40,7 +40,7 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
      * @param key
      */
     remove(key: string) {
-      window.localStorage.removeItem(getKey(key));
+      window.localStorage.removeItem(getStorageKeyInternal(key));
     },
 
     /**
@@ -49,6 +49,7 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
     clear() {
       window.localStorage.clear();
     },
+    getStorageKey: getStorageKeyInternal
   };
 
   /**
@@ -67,7 +68,7 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
      * @param val
      */
     set<T>(key: string, val: T) {
-      window.sessionStorage.setItem(getKey(key), JSON.stringify(val));
+      window.sessionStorage.setItem(getStorageKeyInternal(key), JSON.stringify(val));
     },
 
     /**
@@ -75,7 +76,7 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
      * @param key
      */
     get(key: string) {
-      let json = <string>window.sessionStorage.getItem(getKey(key));
+      let json = <string>window.sessionStorage.getItem(getStorageKeyInternal(key));
       return JSON.parse(json);
     },
 
@@ -84,7 +85,7 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
      * @param key
      */
     remove(key: string) {
-      window.sessionStorage.removeItem(getKey(key));
+      window.sessionStorage.removeItem(getStorageKeyInternal(key));
     },
 
     /**
@@ -111,7 +112,8 @@ const appStorageInstaller = function (appConfig: AppConfiguration) {
         accessToken: this.get(__APP__TOKEN__KEY) && this.get(__APP__TOKEN__KEY)["accessToken"],
         refreshToken: this.get(__APP__TOKEN__KEY) && this.get(__APP__TOKEN__KEY)["refreshToken"]
       }
-    }
+    },
+    getStorageKey: getStorageKeyInternal
   };
 
   return {Local, Session};

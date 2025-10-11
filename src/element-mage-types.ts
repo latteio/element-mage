@@ -41,6 +41,8 @@ export declare interface AppStorageType {
   setTokenStorage<T>(val: T): void;
 
   getTokenStorage(): AppTokenStorage;
+
+  getStorageKey(key: string): string;
 }
 
 export declare interface AppTokenStorage {
