@@ -36,19 +36,21 @@ npm pack
 
 Configuration in package.json: 
 ```json
-"main": "dist/index.umd.js",
-"module": "dist/index.es.js",
-"style": "dist/index.css",
-"types": "dist/types/index.d.ts",
-"files": [
-  "dist"
-],
-"exports": {
+{
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "style": "dist/index.css",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
     ".": {
-    "style": "./dist/index.css",
-    "import": "./dist/index.es.js",
-    "require": "./dist/index.umd.js"
+      "style": "./dist/index.css",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
     }
+  }
 }
 ```
 
