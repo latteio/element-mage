@@ -1,4 +1,4 @@
-import {defineComponent} from "vue";
+import {defineComponent, PropType} from "vue";
 import {baseProps} from "@/components/defineBasicComponent";
 
 const MagTitle = defineComponent({
@@ -10,14 +10,15 @@ const MagTitle = defineComponent({
     subTitle: {type: String, required: false, default: () => ""},
     subType: {type: String, required: false, default: () => "primary"},
     fontSize: {type: Number, required: false, default: () => 24},
-    fontWeight: {type: String, required: false, default: () => "normal"}
+    fontWeight: {type: String, required: false, default: () => "normal"},
+    height: {type: Number as PropType<number>, required: false, default: () => -1}
   },
   setup(props, {attrs}) {
     /**
      * 定义返回模板
      */
     return () => {
-      return <div {...attrs} class="mag-title">
+      return <div {...attrs} class="mag-title" style={`height: ${props.height > 0 ? (props.height + "px;") : "auto;"}`}>
         <div class={`mag-title__main-title mag-font-size-${props?.fontSize} mag-font-weight-${props?.fontWeight}`}>
           {props?.title}
         </div>
