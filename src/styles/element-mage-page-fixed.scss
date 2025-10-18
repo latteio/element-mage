@@ -9,7 +9,8 @@
   border: 1px solid var(--mag-component-border-color);
   box-sizing: border-box;
   padding: 2px 20px;
-  line-height: 40px !important;
+  height: var(--mag-view-header-height) !important;
+  line-height: var(--mag-view-header-height) !important;
 }
 
 .el-page-header.is-contentful .el-page-header__main {
